@@ -24,7 +24,7 @@ const Tasker = ({dataPromise}) => {
                        
                         
                       {
-                        datas.map(<Tr></Tr>)
+                        datas.map(data =>  <Tr key={data.id} data={data}></Tr>)
                       }
 
 

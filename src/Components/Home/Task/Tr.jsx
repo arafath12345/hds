@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Tr = () => {
+const Tr = ({data}) => {
     return (
         <tr>
 
@@ -9,13 +9,12 @@ const Tr = () => {
                     <div className="">
                         <div className="h-12 w-12">
                             <img
-                                src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                src={data.image}
                                 alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold">Vintage Leica M3 Camera
-                        </div>
+                        <div className="font-bold">{data.name}</div>
 
                     </div>
                 </div>
