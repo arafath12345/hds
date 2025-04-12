@@ -1,17 +1,19 @@
-import React, { use } from 'react';
+
 import Tr from './Tr';
 
-const Tasker = ({dataPromise}) => {
-    const datas = use(dataPromise);
-    
-    
-    return (
 
-        <div className='w-2/3 bg-white  rounded-lg'>
-            <div className="overflow-x-auto">
+const Tasker = ({datas,selected,setSelected}) => {
+    
+    
+  
+    return (
+      
+
+        <div className='min-w-2/3   rounded-lg'>
+            <div className="overflow-x-auto bg-white">
                 <table className="table">
                     {/* head */}
-                    <thead>
+                    <thead className='border-black border-2'>
                         <tr>
 
                             <th>Items</th>
@@ -24,7 +26,7 @@ const Tasker = ({dataPromise}) => {
                        
                         
                       {
-                        datas.map(data =>  <Tr key={data.id} data={data}></Tr>)
+                        datas.map(data =>  <Tr selected={selected} setSelected={setSelected}  key={data.id} data={data}></Tr>)
                       }
 
 

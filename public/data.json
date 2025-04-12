@@ -1,52 +1,58 @@
 [
-    {
-      "id": 1002457,
-      "image": "https://i.ibb.co.com/pB12ZQHS/Bid1-min.png",
-      "name": "Vintage Leica M3 Camera",
-      "bid": 500,
-      "timeLeft": 2
-    },
-    {
-      "id": 1003982,
-      "image": "https://i.ibb.co.com/MD7RH5VY/Bid2-min.png",
-      "name": "1965 Gibson SG Standard Electric Guitar",
-      "bid": 800,
-      "timeLeft": 2
-    },
-    {
-      "id": 1007614,
-      "image": "https://i.ibb.co.com/pr4tXwkM/Bid3-min.png",
-      "name": "Original Apple Macintosh 128K (1984)",
-      "bid": 1500,
-      "timeLeft": 4
-    },
-    {
-      "id": 1004428,
-      "image": "https://i.ibb.co.com/3mKGRCjw/Bid4-min.png",
-      "name": "Rolex Submariner 16610",
-      "bid": 3000,
-      "timeLeft": 6
-    },
-    {
-      "id": 1005973,
-      "image": "https://i.ibb.co.com/LXDTLktq/Bid6-min.png",
-      "name": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
-      "bid": 1100,
-      "timeLeft": 7
-    },
-    {
-      "id": 1001296,
-      "image": "https://i.ibb.co.com/237XxwkZ/Bid5-min.png",
-      "name": "Mid-Century Modern Eames Lounge Chair",
-      "bid": 300,
-      "timeLeft": 2
-    },
-    {
-      "id": 1008843,
-      "image": "https://i.ibb.co.com/HLg8VbtJ/Bid7-min.png",
-      "name": "Banksy Original Screen Print",
-      "bid": 450,
-      "timeLeft": 3
-    }
-  ]
-  
+  {
+    "id": 1002457,
+    "image": "https://i.ibb.co.com/pB12ZQHS/Bid1-min.png",
+    "name": "Vintage Leica M3 Camera",
+    "bid": 500,
+    "timeLeft": 2,
+    "bidCount": 8
+  },
+  {
+    "id": 1003982,
+    "image": "https://i.ibb.co.com/MD7RH5VY/Bid2-min.png",
+    "name": "1965 Gibson SG Standard Electric Guitar",
+    "bid": 800,
+    "timeLeft": 2,
+    "bidCount": 11
+  },
+  {
+    "id": 1007614,
+    "image": "https://i.ibb.co.com/pr4tXwkM/Bid3-min.png",
+    "name": "Original Apple Macintosh 128K (1984)",
+    "bid": 1500,
+    "timeLeft": 4,
+    "bidCount": 6
+  },
+  {
+    "id": 1004428,
+    "image": "https://i.ibb.co.com/3mKGRCjw/Bid4-min.png",
+    "name": "Rolex Submariner 16610",
+    "bid": 3000,
+    "timeLeft": 6,
+    "bidCount": 10
+  },
+  {
+    "id": 1005973,
+    "image": "https://i.ibb.co.com/LXDTLktq/Bid6-min.png",
+    "name": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
+    "bid": 1100,
+    "timeLeft": 7,
+    "bidCount": 7
+  },
+  {
+    "id": 1001296,
+    "image": "https://i.ibb.co.com/237XxwkZ/Bid5-min.png",
+    "name": "Mid-Century Modern Eames Lounge Chair",
+    "bid": 300,
+    "timeLeft": 2,
+    "bidCount": 4
+  },
+  {
+    "id": 1008843,
+    "image": "https://i.ibb.co.com/HLg8VbtJ/Bid7-min.png",
+    "name": "Banksy Original Screen Print",
+    "bid": 450,
+    "timeLeft": 3,
+    "bidCount": 9
+  }
+]

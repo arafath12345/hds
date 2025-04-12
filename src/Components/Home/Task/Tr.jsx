@@ -1,14 +1,33 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Tr = ({data}) => {
+const Tr = ({ data, selected, setSelected }) => {
+
+
+    const changerHandle = (currentdata) => {
+      
+        setSelected(prev => [...prev, currentdata]);
+        setTimeout(() => {
+            toast("Bidding Successfully");
+          }, 10);
+       toast.dismiss()
+       
+       
+
+    }
+    const [filteredItem] = selected.filter(item => item.id === data.id);
+
+   
+
     return (
-        <tr>
+        <tr className='border-black border-2'>
 
             <td>
                 <div className="flex items-center gap-3">
                     <div className="">
-                        <div className="h-12 w-12">
-                            <img
+                        <div>
+                            <img className="h-20 w-20"
                                 src={data.image}
                                 alt="Avatar Tailwind CSS Component" />
                         </div>
@@ -20,20 +39,46 @@ const Tr = ({data}) => {
                 </div>
             </td>
             <td>
-                $1200
+                {data.bid}
 
             </td>
-            <td>2 Days left</td>
+            <td>{data.timeLeft} days left.</td>
             <th>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-6 text-red-500">
-                    <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                </svg>
+
+                {
+                    data.id === filteredItem?.id
+
+                        ?
+
+                        <button disabled className='cursor-not-allowed'>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="size-6 text-red-500">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </button>
+
+
+
+                        :
+                        <>
+                            <button onClick={() => changerHandle(data)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+
+                            </button>
+                           
+                        </>
+
+                }
+                <ToastContainer />
+
+
+
+
+
 
 
             </th>
